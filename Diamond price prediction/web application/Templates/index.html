@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <title> Price Predictor</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">Diamond Price Predictor</div>
+        <form action="/" method="POST">
+            <div class="form">
+                <div class="inputfield">
+                    <label for="carat"><h3>Carat</h3></label>
+                    <input class="input" type="text" name="carat" required>
+                </div>
+                <div class="inputfield">
+                    <label for="x"><h3>X</h3></label>
+                    <input class="input" type="text" name="x" required>
+                </div>
+                <div class="inputfield">
+                    <label for="y"><h3>Y</h3></label>
+                    <input class="input" type="text" name="y" required>
+                </div>
+                <div class="inputfield">
+                    <label for="z"><h3>Z</h3></label>
+                    <input class="input" type="text" name="z" required>
+                </div>
+
+
+                <div class="inputfield">
+                    <label for="cut"><h3>Cut</h3></label>
+                    <div class = "custom_select">
+                        <select name="cut" id="cut">
+                            <option value="" selected hidden>Select</option>
+                            <option value="Fair ">Fair </option>
+                            <option value="Good">Good</option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Premium">Premium</option>
+                            <option value="Ideal">Ideal</option>
+                            
+                        </select> 
+                    </div>
+                </div>
+
+                <div class="inputfield">
+                    <label for="color"><h3>Color</h3></label>
+                    <div class = "custom_select">
+                        <select name="color" id="color">
+                            <option value="" selected hidden>Select</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="F">F</option>
+                            <option value="G">G</option>
+                            <option value="H">H</option>
+                            <option value="I ">I </option>
+                            <option value="J ">J </option>
+                            
+                        </select> 
+                    </div>
+                </div>
+
+                
+                
+                <div class="inputfield">
+                    <label for="clarity"><h3>Clarity</h3></label>
+                    <div class = "custom_select">
+                        <select name="clarity" id="clarity">
+                            <option value="" selected hidden>Select</option>
+                            <option value="SI1">SI1</option>
+                            <option value="VS2">VS2</option>
+                            <option value="SI2">SI2</option>
+                            <option value="VS1">VS1</option>
+                            <option value="VVS2">VVS2</option>
+                            <option value="VVS1 ">VVS1 </option>
+                            <option value="IF   ">IF   </option>
+                            <option value="I1  ">I1 </option>
+                        </select> 
+                    </div>
+                </div>
+                <br /><br />
+                <div class="inputfield">
+                    <input class="btn" type="submit" value="Predict Price">
+                </div>
+            </div>
+        </form>
+        
+
+        <div class="result">
+            {% if pred_value != 0 %}
+            <p>Estimated Price : LKR {{pred_value}}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

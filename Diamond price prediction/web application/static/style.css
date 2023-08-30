@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: url('/static/diamond.jpg'); 
+    background-size: cover;
+    padding: 0 10px;
+
+    /*background: rgb(185, 26, 129);
+    padding: 0 10px;*/
+}
+.wrapper{
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    margin: 20px auto;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
+    padding: 30px;
+    border: 2px solid #181818;
+    border-radius: 10px;
+}
+  
+.wrapper .title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: rgb(177, 8, 183);
+    font-family: "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+  
+.wrapper .form{
+    width: 100%;
+}
+  
+.wrapper .form .inputfield{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+  
+.wrapper .form .inputfield label{
+     width: 200px;
+     color: black;
+     margin-right: 10px;
+    font-size: 14px;
+}
+
+.check{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.check label{
+    padding: 0px 10px 0px 0px;
+}
+
+.wrapper .form .inputfield .input{
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+
+.wrapper .form .inputfield .custom_select{
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+  
+.wrapper .form .inputfield .custom_select:before{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+  
+.wrapper .form .inputfield .custom_select select{
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #d5dbd9;
+    border-radius: 3px;
+}
+
+.wrapper .form .inputfield .btn{
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 20px; 
+    border: 0px;
+    background:  black;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    background: linear-gradient(to bottom, #2a2929d2, #000);
+    transition: background 0.3s ease;
+}
+
+.wrapper .form .inputfield .btn:hover {
+    background: linear-gradient(to bottom, #9f9797db, #111); /* Background gradient on hover */
+}
+  
+.result p{
+    text-align: center;
+    color: rgb(238, 13, 13);
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.result p:hover {
+    transform: scale(1.1); 
+}
+
+  
